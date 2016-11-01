@@ -1,0 +1,160 @@
+<div class="flex_wrapper" >
+	<div class="left_nav">
+		<md-content class='me'>
+			<md-list flex>
+				<md-list-item class="md-3-line">
+		          	<img ng-src="img/resources/img/userFoto.png" class="md-avatar" style="" />
+		          	<div class="md-list-item-text" layout="column">
+		        		<h4>Trevor Reyes</h4>
+		          	</div>
+		        </md-list-item>
+	        </md-list>
+	        <ul>
+	        	<li ng-click="ctrl.openModal('create_project');">Project <span>+</span></li>
+	        	<li class="active">Private <span>3</span></li>
+	        	<li>Decode <span>3</span></li>
+	        	<li>Family <span>3</span></li>
+	        	<li>Cookie <span>3</span></li>
+	        </ul>
+	    </md-content>   
+	    <p class="logout">Log out</p>
+	</div>
+	<div class="right_content" >
+		<div class="header" >
+			<input type="text">
+		    <div class="lock-size"  layout="row" layout-align="center center">
+		      	<md-fab-speed-dial md-open="false" md-direction="left" class="md-fling">
+			        <md-fab-trigger aria-expanded="false">
+			          <md-button class="md-icon-button" aria-label="menu">
+				        <md-icon md-svg-icon="img/resources/img/dots.svg"></md-icon>
+				    </md-button>
+			        </md-fab-trigger>
+
+			        <md-fab-actions aria-hidden="true">
+			          <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
+			            <md-icon md-svg-src="img/resources/img/edit.svg" aria-label="Twitter"></md-icon>
+			          </md-button>
+			          <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+			            <md-icon md-svg-src="img/resources/img/delete.svg" aria-label="Facebook"></md-icon>
+			          </md-button>
+			        </md-fab-actions>
+		    	</md-fab-speed-dial>
+	    	</div>
+		</div>
+		<div class="blank" style="display:none;">
+			<img src="img/resources/img/blank.png" alt="">
+		</div>
+		<div class="tasks" >
+			<div  class="item">
+				<p>Today</p>
+				<ul>
+					<li>
+					    <md-radio-group ng-model="isChecked" style='display: inline-block;'>
+							<md-radio-button value="Apple" class="md-primary"></md-radio-button>
+						</md-radio-group>
+						<span ng-click="ctrl.openModal('task');">Create new project</span>
+					</li>
+				</ul>
+			</div>
+			<div class="item">
+				<p>Today</p>
+				<ul >
+					<li>
+						<md-radio-group ng-model="isChecked" >
+							<md-radio-button value="Apple" class="md-primary"></md-radio-button>
+						</md-radio-group>
+						<span ng-click="ctrl.openModal('task');">Call in barber shop</span>
+					</li>
+					<li>
+						<md-radio-group ng-model="isChecked" >
+							<md-radio-button value="Apple" class="md-primary"></md-radio-button>
+						</md-radio-group>
+						<span ng-click="ctrl.openModal('task');">Go to the shop</span>
+					</li>
+					<li>
+						<md-radio-group ng-model="isChecked" >
+							<md-radio-button value="Apple" class="md-primary"></md-radio-button>
+						</md-radio-group>
+						<span ng-click="ctrl.openModal('task');">Call in barber shop</span>
+					</li>
+				</ul>
+			</div>
+			<div class="item">
+				<p>Today</p>
+				<ul >
+					<li>
+						<md-radio-group ng-model="isChecked" >
+							<md-radio-button value="Apple" class="md-primary"></md-radio-button>
+						</md-radio-group>
+						<span ng-click="ctrl.openModal('task');">Call in barber shop</span>
+					</li>
+					<li>
+						<md-radio-group ng-model="isChecked" >
+							<md-radio-button value="Apple" class="md-primary"></md-radio-button>
+						</md-radio-group>
+						<span ng-click="ctrl.openModal('task');">Call in barber shop</span>
+					</li>
+				</ul>
+			</div>
+			<div class="item">
+				<p>Today</p>
+				<ul >
+					<li>
+						<md-radio-group ng-model="isChecked" >
+							<md-radio-button value="Apple" class="md-primary"></md-radio-button>
+						</md-radio-group>
+						<span ng-click="ctrl.openModal('task');">Call in barber shop</span>
+					</li>
+					<li>
+						<md-radio-group ng-model="isChecked" >
+							<md-radio-button value="Apple" class="md-primary"></md-radio-button>
+						</md-radio-group>
+						<span ng-click="ctrl.openModal('task');">Call in barber shop</span>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		<md-button class="md-icon-button plus_btn" aria-label="Custom Icon Button" ng-click="ctrl.openModal('create_task');">
+			<md-icon md-svg-icon="img/resources/img/plus.svg"></md-icon>
+		</md-button>
+
+		
+	</div>
+</div>
+<div class="modal_window" ng-show="ctrl.openModal_" ng-cloak>
+	<div class="left"></div>
+	<div class="right">
+		<div class="header">
+			<div class="esc">
+				<md-button class="md-icon-button esc_btn" aria-label="Custom Icon Button" ng-click="ctrl.openModal_ = false">
+					<md-icon md-svg-icon="img/resources/img/close.svg"></md-icon>
+				</md-button>
+				<p>ECS</p>
+			</div>
+			<h4 ng-show="ctrl.show.task">Open task</h4>
+			<h4 ng-show="ctrl.show.newTask">Create new task</h4>
+			<h4 ng-show="ctrl.show.newProject">Create new project</h4>
+			<div class="controls" ng-show="ctrl.show.task">
+				<img src="img/resources/img/Edit.png" alt="">
+				<img src="img/resources/img/Delete.png" alt="">
+			</div>
+		</div>
+		<div class="content" ng-show="ctrl.show.task">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+		<div class="content" ng-show="ctrl.show.newTask">
+			<input type="text" placeholder = 'Task name'>
+			<input type="text" placeholder = 'Description'>
+		</div>
+		<div class="content" ng-show="ctrl.show.newProject">
+			<input type="text" placeholder = 'Project name'>
+		</div>
+		<md-button class="md-icon-button plus_btn" aria-label="Custom Icon Button" ng-show="ctrl.show.newTask">
+			<md-icon md-svg-icon="img/resources/img/plus.svg"></md-icon>
+		</md-button>
+		<md-button class="md-icon-button plus_btn" aria-label="Custom Icon Button" ng-show="ctrl.show.newProject">
+			<md-icon md-svg-icon="img/resources/img/plus.svg"></md-icon>
+		</md-button>
+	</div>
+</div>
