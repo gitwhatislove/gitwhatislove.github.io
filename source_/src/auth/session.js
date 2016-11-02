@@ -32,14 +32,6 @@ export default class Session {
         });
     }
 
-    get user() {
-        return this.localStorage.user;
-    }
-
-    set user(value) {
-        this.localStorage.user = value;
-    }
-
     get isAuthenticated() {
         return this.localStorage.isAuthenticated;
     }

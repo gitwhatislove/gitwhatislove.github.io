@@ -11,15 +11,11 @@ export default class MainCtrl {
  		this.show.task = false;
     	this.show.newTask = false;
     	this.show.newProject = false;
-
-    	
     	var originatorEv;
 	    this.openMenu = function($mdOpenMenu, ev) {
 	      originatorEv = ev;
 	      $mdOpenMenu(ev);
 	    };
-	    
-
     }
 
 

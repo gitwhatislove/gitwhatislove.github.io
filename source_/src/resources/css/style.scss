@@ -72,8 +72,10 @@ body {
     background-color: $dark_blue;
     position: fixed;
     height: 100vh;
+    top: 0;
+    left: 0;
     .logout {
-        position: absolute;
+          position: absolute;
         bottom: 20px;
         color: #fff;
         left: 40px;

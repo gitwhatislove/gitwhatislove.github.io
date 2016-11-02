@@ -5,7 +5,7 @@ const EXTERNAL_SERVER_ERROR = 500;
 
 export default class Api {
     constructor($http, $state, session) {
-        this.api = "";
+        this.api = "http://docs.testfrontend1.apiary.io";
         this.http = $http;
         this.state = $state;
         this.session = session;
