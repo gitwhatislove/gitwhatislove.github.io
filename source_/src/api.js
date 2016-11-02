@@ -5,7 +5,7 @@ const EXTERNAL_SERVER_ERROR = 500;
 
 export default class Api {
     constructor($http, $state, session) {
-        this.api = "https://unity-dana.herokuapp.com:443/api";
+        this.api = "";
         this.http = $http;
         this.state = $state;
         this.session = session;
