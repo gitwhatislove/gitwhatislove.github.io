@@ -21,25 +21,38 @@
 	</div>
 	<div class="right_content" >
 		<div class="header" >
-			<input type="text">
-		    <div class="lock-size"  layout="row" layout-align="center center">
-		      	<md-fab-speed-dial md-open="false" md-direction="left" class="md-fling">
-			        <md-fab-trigger aria-expanded="false">
-			          <md-button class="md-icon-button" aria-label="menu">
-				        <md-icon md-svg-icon="img/resources/img/dots.svg"></md-icon>
-				    </md-button>
-			        </md-fab-trigger>
+			<md-input-container md-no-float class="md-block">
+	     		<md-icon md-svg-src="img/resources/img/search.svg"></md-icon>
+	      		<input ng-model="user.phone" type="text" placeholder="">
+	    	</md-input-container>
+	    	<!-- <md-button class="md-icon-button" aria-label="menu">
+				<md-icon md-svg-icon="img/resources/img/dots.svg"></md-icon>
+			</md-button> -->
+		<md-menu md-position-mode="target-right target">
+          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon md-svg-icon="img/resources/img/dots.svg"></md-icon>
+          </md-button>
+          <md-menu-content width="3" >
+            <md-menu-item >
+              <md-button ng-click="" >
+                  <div layout="row" flex="">
+                    <p class='text-center' flex="">Edit </p>
+                    <md-icon md-menu-align-target="" md-svg-icon="call:portable-wifi-off" style="margin: auto 3px auto 0;"></md-icon>
+                  </div>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item >
+              <md-button ng-click="">
+                  <div layout="row" flex="">
+                    <p class='text-center' flex="">Delet</p>
+                    <md-icon md-menu-align-target="" md-svg-icon="call:portable-wifi-off" style="margin: auto 3px auto 0;"></md-icon>
+                  </div>
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
 
-			        <md-fab-actions aria-hidden="true">
-			          <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
-			            <md-icon md-svg-src="img/resources/img/edit.svg" aria-label="Twitter"></md-icon>
-			          </md-button>
-			          <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
-			            <md-icon md-svg-src="img/resources/img/delete.svg" aria-label="Facebook"></md-icon>
-			          </md-button>
-			        </md-fab-actions>
-		    	</md-fab-speed-dial>
-	    	</div>
+			
 		</div>
 		<div class="blank" style="display:none;">
 			<img src="img/resources/img/blank.png" alt="">
@@ -144,11 +157,20 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</div>
 		<div class="content" ng-show="ctrl.show.newTask">
-			<input type="text" placeholder = 'Task name'>
-			<input type="text" placeholder = 'Description'>
+			<md-input-container class="md-block" flex-gt-sm>
+            	<label>Task name</label>
+            	<input ng-model="user.task">
+         	</md-input-container>
+          	<md-input-container class="md-block" flex-gt-sm>
+            	<label>Description</label>
+            	<input ng-model="user.description">
+          	</md-input-container>
 		</div>
 		<div class="content" ng-show="ctrl.show.newProject">
-			<input type="text" placeholder = 'Project name'>
+			<md-input-container class="md-block" flex-gt-sm>
+            	<label>Project name</label>
+            	<input ng-model="user.project">
+          	</md-input-container>
 		</div>
 		<md-button class="md-icon-button plus_btn" aria-label="Custom Icon Button" ng-show="ctrl.show.newTask">
 			<md-icon md-svg-icon="img/resources/img/plus.svg"></md-icon>
@@ -158,3 +180,28 @@
 		</md-button>
 	</div>
 </div>
+
+
+		<md-menu md-position-mode="target-right target">
+          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon md-menu-origin="" md-svg-icon="call:portable-wifi-off"></md-icon>
+          </md-button>
+          <md-menu-content width="4">
+            <md-menu-item >
+              <md-button ng-click="ctrl.announceClick($index)">
+                  <div layout="row" flex="">
+                    <p flex="">Option {{item}}</p>
+                    <md-icon md-menu-align-target="" md-svg-icon="call:portable-wifi-off" style="margin: auto 3px auto 0;"></md-icon>
+                  </div>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item >
+              <md-button ng-click="ctrl.announceClick($index)">
+                  <div layout="row" flex="">
+                    <p flex="">Option {{item}}</p>
+                    <md-icon md-menu-align-target="" md-svg-icon="call:portable-wifi-off" style="margin: auto 3px auto 0;"></md-icon>
+                  </div>
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>

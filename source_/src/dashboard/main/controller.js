@@ -2,7 +2,7 @@
 
 
 export default class MainCtrl { 
-    constructor() {
+    constructor($mdDialog) {
  		this.search = '';
  		this.isOpen = false;
  		this.selectedMode = 'md-fling';
@@ -11,6 +11,16 @@ export default class MainCtrl {
  		this.show.task = false;
     	this.show.newTask = false;
     	this.show.newProject = false;
+
+    	
+    	var originatorEv;
+	    this.menuHref = "http://www.google.com/design/spec/components/menus.html#menus-specs";
+	    this.openMenu = function($mdOpenMenu, ev) {
+	      originatorEv = ev;
+	      $mdOpenMenu(ev);
+	    };
+	    
+
     }
 
 
