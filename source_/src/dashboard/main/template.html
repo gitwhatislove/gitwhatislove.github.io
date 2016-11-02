@@ -149,8 +149,8 @@
 			<h4 ng-show="ctrl.show.newTask">Create new task</h4>
 			<h4 ng-show="ctrl.show.newProject">Create new project</h4>
 			<div class="controls" ng-show="ctrl.show.task">
-				<img src="img/resources/img/Edit.png" alt="">
-				<img src="img/resources/img/Delete.png" alt="">
+				<md-icon md-svg-icon="img/resources/img/edit.svg"></md-icon>
+				<md-icon md-svg-icon="img/resources/img/delete.svg"></md-icon>
 			</div>
 		</div>
 		<div class="content" ng-show="ctrl.show.task">
@@ -180,28 +180,3 @@
 		</md-button>
 	</div>
 </div>
-
-
-		<md-menu md-position-mode="target-right target">
-          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
-            <md-icon md-menu-origin="" md-svg-icon="call:portable-wifi-off"></md-icon>
-          </md-button>
-          <md-menu-content width="4">
-            <md-menu-item >
-              <md-button ng-click="ctrl.announceClick($index)">
-                  <div layout="row" flex="">
-                    <p flex="">Option {{item}}</p>
-                    <md-icon md-menu-align-target="" md-svg-icon="call:portable-wifi-off" style="margin: auto 3px auto 0;"></md-icon>
-                  </div>
-              </md-button>
-            </md-menu-item>
-            <md-menu-item >
-              <md-button ng-click="ctrl.announceClick($index)">
-                  <div layout="row" flex="">
-                    <p flex="">Option {{item}}</p>
-                    <md-icon md-menu-align-target="" md-svg-icon="call:portable-wifi-off" style="margin: auto 3px auto 0;"></md-icon>
-                  </div>
-              </md-button>
-            </md-menu-item>
-          </md-menu-content>
-        </md-menu>

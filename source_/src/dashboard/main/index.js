@@ -21,8 +21,4 @@ export default angular.module('dashboard.main', [
         .iconSet("call", 'img/resources/img/plus.svg', 24)
         .iconSet("social", 'img/resources/img/plus.svg', 24);    
     });
-    // .config(function($mdIconProvider) {
-    //     $mdIconProvider
-    //     .iconSet("call", 'img/resources/img/dots.svg', 24)
-    //     .iconSet("social", 'img/resources/img/dots.svg', 24);
-    // })
+    
