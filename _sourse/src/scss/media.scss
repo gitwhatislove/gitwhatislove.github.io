@@ -1,0 +1,51 @@
+@media (max-width: 600px) {
+	.wrapp_up_to_date_browser {
+  		.up_to_date_browser {
+			flex-direction: column;
+			ustify-content: flex-start;
+			align-items: center;
+			li {
+				margin: 10px 0;
+			}
+  		}
+  	}
+  	.wrapp_check_connect {
+  		.wrapp_questions {
+  			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+  		}
+  	}
+  	.wrapp_info  {
+  		.browse_info {
+	  		ul {
+	  			li {
+	  				img {
+	  					padding: 0 20px;
+	  				}
+	  				span {
+	  					display: none;
+	  				}
+	  			}
+	  		}
+  		}
+  	}
+  	
+}
+
+@media (max-width: 920px) {
+	.wrapp_info  {
+  		.browse_info {
+  			margin: 30px 20px 0 20px; 
+  		}
+  	}
+  	.wrapp_info {
+  		.all_info {
+  			.note {
+  				margin-left: 15px;
+				margin-right: 15px;
+  			}
+  		} 
+  	}	
+  		
+}
