@@ -1,139 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title></title>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="all.css">
-
-
-  </head>
-  <body>
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="all.min.css">
+</head>
+<body>
 	<header>
-		<div class="container top_header">
-				<div class="logo">
-					<a href=""><img src="img/logo.png" alt="Логотип"></a>
-					<div>
-						<h2>Логотип</h2>
-						<p>Инжиниринговая компания</p>
-					</div>
-				</div>
-				<div class="search">
-					<form action="">
-						<input type="text">
-					</form>
-				</div>
-		</div>
-		<div class="container-fluid">
-			<div class="row line">
-				<div class="col-md-12 text-center">
-					<nav class="navbar navbar-default">
-							<div class="navbar-header">
-							  	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-							 	</button>
-							</div>
-							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							  	<ul class="nav navbar-nav custom_nav">
-									<li>О компании</li>
-									<li>Услуги</li>
-									<li>Объекты</li>
-									<li class="activ">Закупки</li>
-									<li>Партнеры</li>
-									<li>Новости</li>
-									<li>Контакты</li>
-							 	</ul>
-							</div>
-					</nav>
-				</div>
-			</div>
-		</div>
+		<nav>
+			<ul>
+				<li >Womens</li>
+				<li>Mens</li>
+				<li class="activ_li">Children</li>
+				<li>Footwear</li>
+				<li>Accessories</li>
+				<li>Outlet</li>
+				<li>Designer</li>
+				<li>Communitty</li>
+			</ul>
+		</nav>
+		<ul class="flags">
+			<li><img src="img/en.svg" alt="en"></li>
+			<li><img src="img/ru.svg" alt="ru"></li>
+			<li><img src="img/de.svg" alt="de"></li>
+			<li><img src="img/fr.svg" alt="fr"></li>
+		</ul>
 	</header>
-	<section class="custom_carousel">
-		<div class="container-fluid">
-			<div class="row">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						</ol>
-					  	<div class="carousel-inner" role="listbox">
-							<div class="item active" style="background-image: url('img/bg_slide.jpg')">
-								<div class="bg"></div>
-						  		<div class="carousel-caption">
-						  			<h3 class="custom_label">Наши компетенции</h3>
-									<h1>Объекты<br> химической<br> промышленности</h1>
-									<p>	Важнейшим преимуществом компании является способность<br> проектировать и строить «под ключ». При этом данные процессы ведутся<br> одновременно, что позволяет заказчику значительно сократить общий<br> строительный цикл объекта.</p>
-						  		</div>
-							</div>
-							<div class="item" style="background-image: url('img/bg_slide.jpg')">
-						  		<div class="carousel-caption">
-						  			<h3 class="custom_label">Наши компетенции</h3>
-									<h1>Объекты<br> химической<br> промышленности</h1>
-									<p>	Важнейшим преимуществом компании является способность<br> проектировать и строить «под ключ». При этом данные процессы ведутся<br> одновременно, что позволяет заказчику значительно сократить общий<br> строительный цикл объекта.</p>
-						  		</div>
-							</div>
-							<div class="item " style="background-image: url('img/bg_slide.jpg')">
-								<div class="bg"></div>
-						  		<div class="carousel-caption">
-						  			<h3 class="custom_label">Наши компетенции</h3>
-									<h1>Объекты<br> химической<br> промышленности</h1>
-									<p>	Важнейшим преимуществом компании является способность<br> проектировать и строить «под ключ». При этом данные процессы ведутся<br> одновременно, что позволяет заказчику значительно сократить общий<br> строительный цикл объекта.</p>
-						  		</div>
-							</div>
-					  	</div>
+	<section>
+		<div class="wrapp_content">
+			<h1>Browser Trouble</h1>
+			<div class="wrapp_info">
+				<div class="all_info">
+					<h2>Empty your browser's cache</h2>
+					<p class="info">Clearing your browser’s cache can force recently changed web pages to show up properly. Each browser handles caching differently, so be sure to follow the correct steps for your particular browser.</p>
+					<div class="note">
+						<p><strong>Note:</strong>  If your browser version is not listed here, <a href="#">Google</a> has more comprehensive instructions covering older versions of these browsers.</p>
 					</div>
+				</div>
+				<div class="browse_info" id="tab_1">
+					<ul>
+						<!-- <li class="active"><img src="img/ie.png" alt=""><span>Internet Explorer</span></li> -->
+						<li id="tab_1_ie" class="active"><img src="img/ie.png" alt="IE"><span>Internet Explorer</span></li>
+						<li id="tab_1_ff"><img src="img/ff.png" alt="FF"> <span>Firefox</span></li>
+						<li id="tab_1_ch"><img src="img/ch.png" alt="CH"> <span>Chrome</span></li>
+						<li id="tab_1_sf"> <img src="img/sf.png" alt="SF"> <span>Safari</span></li>
+					</ul>
+					<div class="info first_info" id='tab_1_ie_'>
+						<ol>
+							<li>In your browser's menu bar go to Tools → Internet Options → General → Browsing History → Delete...</li>
+							<li>From this window delete the Temporary Internet Files.</li>
+							<li>Close this window, then select OK before exiting the browser.</li>
+						</ol>
+					</div>
+					<div class="info" id='tab_1_ff_'>
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, voluptatum. Recusandae harum quas beatae nemo dolor minima tempora repudiandae quia.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, assumenda?</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis aut labore, expedita ducimus magni suscipit!</li>
+						</ol>
+					</div>
+					<div class="info" id='tab_1_ch_'>
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, neque.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, quis.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quibusdam.</li>
+						</ol>
+					</div>
+					<div class="info" id='tab_1_sf_'>
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, temporibus?</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, vero.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, corporis.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="wrapp_info">
+				<div class="all_info">
+					<h2>Remove stale cookies</h2>
+					<p class="info">A cookie is a piece of text stored by your browser to help it remember your login information, site preferences, and more. If you are having problems with one of our sites, deleting your cookies will reset your preferences to their default values.</p>
+					<div class="note">
+						<p><strong>Note:</strong>On Firefox, Chrome, and Safari, it is possible to search for and delete only your 37signals cookies. On Internet Explorer you will have to delete all cookies.</p>
+					</div>
+				</div>
+				<div class="browse_info" id="tab_2">
+					<ul>
+						<li id="tab_2_ie" class="active"><img src="img/ie.png" alt=""><span>Internet Explorer</span></li>
+						<li id="tab_2_ff"><img src="img/ff.png" alt=""> <span>Firefox</span></li>
+						<li id="tab_2_ch"><img src="img/ch.png" alt=""> <span>Chrome</span></li>
+						<li id="tab_2_sf"> <img src="img/sf.png" alt=""> <span>Safari</span></li>
+					</ul>
+					<div class="info first_info" id='tab_2_ie_'>
+						<ol>
+							<li>In your browser's menu bar go to Tools → Internet Options → General → Browsing History → Delete...</li>
+							<li>From this window delete the Temporary Internet Files.</li>
+							<li>Close this window, then select OK before exiting the browser.</li>
+						</ol>
+					</div>
+					<div class="info" id='tab_2_ff_'>
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, sed.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, beatae.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, sapiente.</li>
+						</ol>
+					</div>
+					<div class="info" id='tab_2_ch_'>
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, architecto.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, praesentium.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sequi.</li>
+						</ol>
+					</div>
+					<div class="info" id='tab_2_sf_'>
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, laudantium.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, expedita.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, quaerat.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			
+			<div class="wrapp_up_to_date_browser">
+				<h2 class="">Make sure your browser is up-to-date</h2>
+				<p>To get the most out of our products, we recommend keeping your browser up-to-date. Modern browsers typically render pages faster, support richer interactivity, and offer enhanced security to keep your data safe. Plus, knowing that you have a newer browser means we can spend less time squashing bugs and more time improving your experience. We support the following browsers:</p>
+				<ul class="up_to_date_browser">
+					<li> 
+						<img src="img/ie_big.png" alt="Internet Explorer"> 
+						<h4><a href="#">Internet Explorer</a></h4>
+						<p>Version 8+</p>
+					</li>
+					<li> 
+						<img src="img/ff_big.png" alt="Mozila Firefix"> 
+						<h4><a href="#">Mozila Firefix</a></h4>
+						<p>Version 4+</p>
+					</li>
+					<li> 
+						<img src="img/ch_big.png" alt="Google Chrome"> 
+						<h4><a href="#">Google Chrome</a></h4>
+					</li>
+					<li> 
+						<img src="img/sf_big.png" alt="Apple Safari"> 
+						<h4><a href="#">Apple Safari</a></h4>
+						<p>Version 5+</p>
+					</li>
+				</ul>
+				<div class="notes">
+					<p><strong>Please note:</strong> We do not support Internet Explorer 6 or Opera. Please download one of the browsers above to continue using our products without hiccups.</p>
+				</div>
+			</div>	
+			<div class="wrapp_check_connect">
+				<h2>Check your internet connection</h2>
+				<div class="wrapp_questions">
+					<div class="connect_question">
+						<h5>Can you access other major web sites?</h5>
+						<p>If you're having trouble accessing one of our sites, try visiting <a href="http://www.google.com" target="_blank">Google</a>, <a href="http://www.yahoo.com" target="_blank">Yahoo</a>, or <a href="http://www.apple.com" target="_blank">Apple</a> before submitting a support request. If these sites fail, you may have a more serious connection issue — try our other connection tips to the right.</p>
+						<p> Assuming those major sites show up fine, it's time to verify whether other people can access our products. To look into that, be sure to visit status.37signals.com or <a href="#" target="_blank">Down For Everyone Or Just Me.</a></p>
+						<p> Just you? The best explaination could be a DNS issue. DNS servers figure out how internet domain names (like 37signals.com) map to server IP addresses. Try switching to <a href="#" target="_blank">Google Public DNS</a> or <a href="#" target="_blank">Open DNS</a> to see if that resolves the issue.</p>
+					</div>
+					<div class="connect_question">
+						<h5>Try another browser</h5>
+						<p>	Extensions or other software may occasionally corrupt your browser, leading to unexpected behavior. Before making changes to your primary browser, try accessing the internet with another browser like Chrome or Firefox. 
+						</p>
+						<h5>Check your anti-virus and firewall settings</h5>
+						<p>Still having issues no matter which browser you're using? Try disabling your anti-virus software — corrupt or partially-uninstalled software can break your access to the internet. Also try disabling your firewall temporarily to see if that helps.</p> 
+						<p>If you continue experiencing issues even with anti-virus and firewall disabled, it's time to check your connection to the network.</p>
+
+					</div>
+					<div class="connect_question">
+						<h5>On Wi-Fi? Make sure you're connected.</h5>
+						<p>Wireless hotspots are great, but they're not always reliable. If you're using wi-fi but having connection issues, start by verifying your connection to the base station. Are you connected to the base station you expect or did your computer pick up someone else's signal? Did you enter the correct password?</p> 
+						<p> If you're on the correct base station and the password checks out, try looking into your signal strength. If it's relatively weak, try moving closer to the hotspot and try accessing the web again.</p> 
+						<p> Good signal but still having issues? It may be time to restart the base station and try again in a few minutes.
+						</p>
+
+					</div>
+					<div class="connect_question">
+						<h5>Restart your modem and your router.</h5>
+						<p>When all else fails, it's time to check the hardware that connects you to the internet in the first place. If you can access the modem and the router, you'll need to disconnect them from their power source (the power button often just puts them in standby).</p>
+						<p> Once you've powered down the modem and router, wait 10-15 seconds, then plug the modem back in, followed by the router. Allow time for both to boot up and connect by watching the activity lights, then try connecting to the internet again on your computer.</p>
+				
+					</div>
+				</div>
+				<h3>Still have questions? Submit a <a href="#" target="_blank">support request via email</a>. We'll get back to you within a few hours.</h3>
 			</div>
 		</div>
 	</section>
-	<section>
-		<ul class="services">
-			<li>
-				<div>
-					<img src="img/us1.png" alt="Услуги проектирования">
-				</div>
-				<p>Услуги<br> проектирования</p>
-			</li>
-			<li>
-				<div>
-					<img src="img/us2.png" alt="Строительно монтажные работы">
-				</div>
-				<p>Строительно-<br> монтажные работы</p>
-			</li>
-			<li>
-				<div>
-					<img src="img/us3.png" alt="Эксперементальная деятельность">
-				</div>
-				<p>Эксперементальная<br> деятельность</p>
-			</li>
-			<li>
-				<div>
-					<img src="img/us4.png" alt="Техническое обслуживание">
-				</div>
-				<p>Техническое<br> обслуживание</p>
-			</li>
-			<li>
-				<div>
-					<img src="img/us5.png" alt="Испытательная лабаратория">
-				</div>
-				<p>Испытательная<br> лабаратория</p>
-			</li>
-		</ul>		
-	</section>
+	<footer>
+		<p>Copyright Web Design Inc. 2001—2011. All rights reserved. </p>
+	</footer>
 
-
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
-  </body>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src='js/main.js'></script>
+</body>
 </html>
