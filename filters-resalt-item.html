@@ -12,12 +12,12 @@
     <!--BEGIN out-->
     <div class="out">
       <header class="header"><a href="#"><img class="header__logo" src="img/logo.png"></a>
-        <p class="header__text header__text-ipad">+375 29 000 00 00</p>
+        <p class="header__text header__text-ipad"><a href="tel:+1234567890">+375 29 000 00 00</a></p>
         <div class="header__menu" id="header__menu">
           <label class="hamburger js-menu-open" for="hamburger" id=""><span></span><span></span><span></span></label>
         </div>
       </header>
-      <h3 class="header__text-iphone">+375 29 000 00 00</h3>
+      <p class="h3 header__text-iphone header__text-iphone-border"> <a href="tel:+1234567890">+375 29 000 00 00</a></p>
       <div class="wrapp-filters-resalt-item-page">
         <section class="title-logo_quarter">
           <div class="logo_quarter"><img class="logo_quarter__ipad" src="img/kedr_logo.png" alt="Кедровый квартал"><img class="logo_quarter__iphone" src="img/kedr_logo_iphone.png" alt="Кедровый квартал"></div>
@@ -27,7 +27,7 @@
             <h3>1-комната, 44,92 м <sup>2</sup></h3>
             <p>Кедровый квартал</p><img src="img/house-shema.png">
             <div class="wrapp-btn">
-                    <button class="btn btn-green btn-uppercase btn-center js_form_order">Оставить заявку</button>
+                    <button class="btn btn-green btn-uppercase btn-center js_form_order-open">Оставить заявку</button>
             </div>
             <ul>
               <li>
@@ -83,31 +83,36 @@
         </section>
       </div>
       <footer class="footer footer__footer">
-        <ul class="links_quarter">
-          <li> 
-            <h3> <a href="#">Кедровый квартал</a></h3>
-          </li>
-          <li> <a href="#">О квартале</a></li>
-          <li> <a href="#">Цены и условия</a></li>
-          <li> <a href="#">Фотогалерея</a></li>
-          <li> 
-            <h3> <a href="#">Сосновый квартал</a></h3>
-          </li>
+        <div class="wrapp-menu_footer">
+          <div>
+            <p class="h3 js-drop">Кедровый квартал</p>
+            <ul class="links_quarter js-drop-content">
+              <li> <a href="#">О квартале</a></li>
+              <li> <a href="#">Цены и условия</a></li>
+              <li> <a href="#">Фотогалерея</a></li>
+              <li> <a href="#">О квартале</a></li>
+              <li> <a href="#">Цены и условия</a></li>
+              <li> <a href="#">Фотогалерея</a></li>
+              <li> <a href="#">О квартале</a></li>
+              <li> <a href="#">Цены и условия</a></li>
+              <li> <a href="#">Фотогалерея</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="h3 js-drop">Сосновый квартал</p>
+            <ul class="links_quarter js-drop-content">
+              <li> <a href="#">О квартале</a></li>
+              <li> <a href="#">Цены и условия</a></li>
+              <li> <a href="#">Фотогалерея</a></li>
+            </ul>
+          </div>
+        </div>
+        <ul class="links_all links_quarter">
+          <li> <a href="#">Программа лояльности</a></li>
+          <li> <a href="#">Новости и акции</a></li>
+          <li> <a href="#">Отдел продаж </a></li>
         </ul>
-        <ul class="links_all">
-          <li> 
-            <h3> <a href="#">Программа лояльности</a></h3>
-          </li>
-          <li> 
-            <h3> <a href="#">Новости и акции</a></h3>
-          </li>
-          <li> 
-            <h3> <a href="#">Отдел продаж</a></h3>
-          </li>
-          <li> 
-            <h3> </h3>
-          </li>
-        </ul><a class="btn btn-green btn-center btn-uppercase" href="#">подобрать квартиру</a>
+              <object><a class="btn btn-green btn-center btn-uppercase" href="#">подобрать квартиру</a></object>
         <ul class="social_links">
           <li><a href="#"><svg version="1.1" id="Layer_21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-420.9 250.7 20.3 11.5" enable-background="new -420.9 250.7 20.3 11.5" xml:space="preserve"><path d="M-401.5,251.2h-3.3c-0.3,0-0.5,0.2-0.7,0.4c0,0-1.3,2.4-1.7,3.2c-1.1,2.2-1.9,1.5-1.9,0.5v-3.5c0-0.6-0.5-1.1-1.1-1.1h-2.5c-0.7-0.1-1.3,0.3-1.8,0.8c0,0,1.3-0.2,1.3,1.5c0,0.4,0,1.6,0,2.6c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.4-0.1-0.6-0.2c-1-1.4-1.9-2.9-2.5-4.5c-0.1-0.2-0.4-0.4-0.6-0.4c-0.7,0-2.1,0-3,0c-0.3,0-0.5,0.2-0.5,0.5c0,0.1,0,0.1,0,0.2c0.9,2.5,4.8,10.3,9.3,10.3h1.9c0.4,0,0.7-0.3,0.7-0.7v-1.1c0-0.4,0.3-0.7,0.7-0.7c0.2,0,0.4,0.1,0.5,0.2l2.2,2.1c0.2,0.2,0.5,0.3,0.7,0.3h3c1.4,0,1.4-1,0.6-1.8c-0.5-0.5-2.5-2.6-2.5-2.6c-0.3-0.4-0.4-0.9-0.1-1.3c0.6-0.8,1.7-2.2,2.1-2.8C-401,252.9-400,251.2-401.5,251.2z"/></svg></a></li>
           <li><a href="#"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="259.6 84.4 351 239.5" enable-background="new 259.6 84.4 351 239.5" xml:space="preserve"><path d="M573.2,84.4H297c-20.6,0-37.4,16.8-37.4,37.4v164.6c0,20.6,16.8,37.4,37.4,37.4h276.2c20.6,0,37.4-16.8,37.4-37.4V121.8C610.6,101.2,593.8,84.4,573.2,84.4z M385.6,261.2V146.9l99,57.1L385.6,261.2z"/></svg></a></li>
@@ -119,19 +124,27 @@
       <div class="menu_mobile js_menu_mobile_open">
         <div class="footer footer__menu">
           <div class="wrapp-menu-logo"><img class="menu-logo" src="img/logo_white.png" alt="logo">
-            <p class="js-menu-open"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></p>
+            <p class="js-menu-close"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></p>
           </div>
           <div class="menu-title">
-            <div class="wrapper-kedr border-bottom">
-              <h3 id="js-title-kedr-menu"> <a href="#">Кедровый квартал</a></h3>
-              <ul class="links_quarter links_quarter-drop" id="js-title-kedr-content">
+            <div class="border-bottom">
+              <p class="h3 js-drop">Кедровый квартал</p>
+              <ul class="links_quarter links_quarter-drop js-drop-content">
                 <li> <a href="#">О квартале</a></li>
                 <li> <a href="#">Цены и условия</a></li>
                 <li> <a href="#">Фотогалерея</a></li>
               </ul>
             </div>
-            <h3> <a href="#">Сосновый квартал</a></h3>
-          </div><a class="btn btn-white btn-center btn-uppercase">подобрать квартиру</a>
+            <div>
+              <p class="h3 js-drop">Сосновый квартал</p>
+              <ul class="links_quarter links_quarter-drop js-drop-content">
+                <li> <a href="#">О квартале</a></li>
+                <li> <a href="#">Цены и условия</a></li>
+                <li> <a href="#">Фотогалерея</a></li>
+              </ul>
+            </div>
+          </div>
+                <object><a class="btn btn-white btn-center btn-uppercase">подобрать квартиру</a></object>
           <ul class="links_quarter">
             <li> <a href="#">Программа лояльности</a></li>
             <li> <a href="#">О застройщике</a></li>
@@ -139,8 +152,8 @@
             <li><a href="#">Новости</a></li>
             <li><a href="#">Отдел продаж</a></li>
           </ul>
-          <h3>+375 29 300 00 00</h3>
-                <button class="btn btn-opasity btn-center btn-uppercase js_form_order">Обратный звонок</button>
+          <p class="h3"> <a href="tel:+1234567890">+375 29 300 00 00</a></p>
+                <button class="btn btn-opasity btn-center btn-uppercase js_form_order-open">Обратный звонок</button>
           <ul class="social_links">
             <li><a href="#"><svg version="1.1" id="Layer_21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-420.9 250.7 20.3 11.5" enable-background="new -420.9 250.7 20.3 11.5" xml:space="preserve"><path d="M-401.5,251.2h-3.3c-0.3,0-0.5,0.2-0.7,0.4c0,0-1.3,2.4-1.7,3.2c-1.1,2.2-1.9,1.5-1.9,0.5v-3.5c0-0.6-0.5-1.1-1.1-1.1h-2.5c-0.7-0.1-1.3,0.3-1.8,0.8c0,0,1.3-0.2,1.3,1.5c0,0.4,0,1.6,0,2.6c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.4-0.1-0.6-0.2c-1-1.4-1.9-2.9-2.5-4.5c-0.1-0.2-0.4-0.4-0.6-0.4c-0.7,0-2.1,0-3,0c-0.3,0-0.5,0.2-0.5,0.5c0,0.1,0,0.1,0,0.2c0.9,2.5,4.8,10.3,9.3,10.3h1.9c0.4,0,0.7-0.3,0.7-0.7v-1.1c0-0.4,0.3-0.7,0.7-0.7c0.2,0,0.4,0.1,0.5,0.2l2.2,2.1c0.2,0.2,0.5,0.3,0.7,0.3h3c1.4,0,1.4-1,0.6-1.8c-0.5-0.5-2.5-2.6-2.5-2.6c-0.3-0.4-0.4-0.9-0.1-1.3c0.6-0.8,1.7-2.2,2.1-2.8C-401,252.9-400,251.2-401.5,251.2z"/></svg></a></li>
             <li><a href="#"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="259.6 84.4 351 239.5" enable-background="new 259.6 84.4 351 239.5" xml:space="preserve"><path d="M573.2,84.4H297c-20.6,0-37.4,16.8-37.4,37.4v164.6c0,20.6,16.8,37.4,37.4,37.4h276.2c20.6,0,37.4-16.8,37.4-37.4V121.8C610.6,101.2,593.8,84.4,573.2,84.4z M385.6,261.2V146.9l99,57.1L385.6,261.2z"/></svg></a></li>
@@ -151,26 +164,26 @@
       <div class="menu_mobile modal js_modal_mobile_open">
         <div class="footer footer__menu">
           <div class="wrapp-menu-logo"><img class="menu-logo" src="img/logo_white.png" alt="logo">
-            <p class="js_form_order"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></p>
+            <p class="js_form_order-close"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></p>
           </div>
           <div class="menu-title">
             <form class="js_submit_form">
-              <div class="success_submit hidden"> 
+              <div class="success_submit js_success_submit"> 
                 <h3>Спасибо!</h3>
               </div>
-              <div class="form_fields">
+              <div class="form_fields js_form_fields">
                 <h3 class="border-bottom">Заявка</h3>
                 <div class="field">
                   <h4>Имя</h4>
-                  <input class="btn-white_white-border" type="text" name="user" data-validation="length alphanumeric" data-validation-length="3-50">
+                  <input class="btn-white_white-border" type="text" name="user" data-validation="length alphanumeric" data-validation-length="3-50" autocomplete="off">
                 </div>
                 <div class="field">
                   <h4>Телeфон</h4>
-                  <input class="btn-white_white-border chars" type="tel" data-validation="length" data-validation-length="6-50">
+                  <input class="btn-white_white-border chars" type="tel" data-validation="length" data-validation-length="6-50" autocomplete="off">
                 </div>
                 <div class="field">
                   <h4>E-mail</h4>
-                  <input class="btn-white_white-border" data-validation="email" type="text" name="email">
+                  <input class="btn-white_white-border" data-validation="email" type="text" name="email" autocomplete="off">
                 </div>
                 <div class="field">
                   <h4>Сообщение</h4>
