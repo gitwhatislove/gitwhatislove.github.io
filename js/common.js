@@ -250,8 +250,11 @@ function initSliderOne() {
 function swichTabs() {
 	$(this).addClass("active").siblings().removeClass("active");
 	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
-	currTab.fadeIn(250).siblings().fadeOut(0);
-	currTab.slick('setPosition');
+	currTab.removeClass('hidden').siblings().addClass('hidden');
+	if (currTab.hasClass('js-slider-init')) {
+		currTab.slick('setPosition');
+	}
+	
 }
 
 function shadowScroll(scrollContainer, scrolling, add) {
@@ -286,6 +289,13 @@ function initBurger() {
 
 function initForm() {
 	$('.js-form input').on( "focusout", function() {
+		if(this.value.length != 0) {
+			$(this).addClass('input-border-bottom-value');
+		}
+		else $(this).removeClass('input-border-bottom-value');
+	})
+	$('.js-form .input-wrapp input').on( "focusout", function() {
+		console.log($(this));
 		if(this.value.length != 0) {
 			$(this).addClass('input-border-bottom-value');
 		}
@@ -389,17 +399,42 @@ function initFilters() {
 		// $(this).find('.item-filter-content').fadeToggle(100);
 	});
 
-	//доделать добавление в фильир визуальное и удаление
-	$('.js-check').each(function () {
+	$('.js-chechbox').each(function () {
 		var textFilter  = [];
-		$(this).on('click', function() {
-			var id  = '#' + $(this).attr('for');
-			$(id).prop("checked");
-			if (!$(id).prop("checked")){
-				textFilter.push($(this).text());
-			}
-		})
-		
+		var chechbox = $(this).find('label');
+		var defaultText = $(this).find('.fild-filter').text();
+		var __self = $(this);
+		$(chechbox).each(function () {
+			$(this).on('click', function() {
+				var __clickSelf = $(this);
+				if (!$(this).prev().prop("checked")) {
+					textFilter.push($(this).text());
+					console.log(textFilter);
+				}
+				else {
+					textFilter = textFilter.filter(function(el) {
+						return el != __clickSelf.text();
+					});
+				}
+				if (textFilter.length > 0) {
+					var result = textFilter.reduce(function(sum, current) {
+						return sum + ', ' + current ;
+					}, 0);
+					__self.find('.fild-filter').text(result.split(', ').splice(1,result.length).join(', '));
+					__self.find('.js-close').removeClass('hidden');
+				}
+				else  {
+					__self.find('.fild-filter').text(defaultText);
+					__self.find('.js-close').addClass('hidden');
+				}
+			})
+		});
+		$(this).find('.js-close').on('click', function() {
+			__self.find('.fild-filter').text(defaultText);
+			__self.find('form')[0].reset();
+			textFilter  = [];
+			$(this).addClass('hidden')
+		});
 	});
 }
 
@@ -410,8 +445,8 @@ function initSlidersUi() {
 		sliderSetting.max = $(this).data("max");
 		sliderSetting.min = $(this).data("min");
 		sliderSetting.step = $(this).data("step");
-		sliderSetting.defaultValueTo = $(this).data("default-value-to");
-		sliderSetting.defaultValueFrom = $(this).data("default-value-from");
+		sliderSetting.defaultValueTo = '0'+ $(this).data("default-value-to") +'.00';
+		sliderSetting.defaultValueFrom = $(this).data("default-value-from") +'.00';
 		// sliderSetting.labelTo = $(this).find(".js_ui_slider_label");
 		sliderSetting.inputHidden = $(this).find(".js_ui_slider_input");
 		sliderSetting.inputHiddenTop = $(this).find(".js_ui_slider_value_top");
@@ -424,8 +459,25 @@ function initSlidersUi() {
 			values: [ sliderSetting.defaultValueTo, sliderSetting.defaultValueFrom ],
 			slide: function( event, ui ) {
 				// $(sliderSetting.inputHidden).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-				$(sliderSetting.inputHiddenTop).val(ui.values[ 1 ]);
-				$(sliderSetting.inputHiddenBottom).val(ui.values[ 0 ]);
+				var __timeDown = '';
+				if (ui.values[ 0 ] < 10) {
+					var __timeDown = '0'+ ui.values[ 0 ]+'.00'
+				}
+				else {
+					var __timeDown = ui.values[ 0 ]+'.00'
+				}
+
+				if (ui.values[ 1 ] < 10) {
+					var __timeUp = '0'+ui.values[ 1 ]+'.00'
+				}
+				else {
+					var __timeUp = ui.values[ 1 ]+'.00'
+				}
+
+				
+				$(sliderSetting.inputHiddenTop).val(__timeUp);
+				$(sliderSetting.inputHiddenBottom).val(__timeDown);
+				
 			}
 		});
 		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
@@ -617,12 +669,12 @@ function initLike() {
 			if ($(this).attr('data-like') == '1') {
 				$(this).find('img').attr( 'src', 'img/icons/heart-2.png' );
 				$(this).attr( "data-like", '0');
-				$(this).addClass('show');
+				$(this).toggleClass('show');
 			}
 			else {
 				$(this).find('img').attr( 'src', 'img/icons/heart1.png' );
 				$(this).attr( "data-like", '1');
-				$(this).removeClass('show');
+				$(this).toggleClass('show');
 			}
 			return false;
 		})
@@ -648,6 +700,34 @@ function initFooterHover() {
 	})
 }
 
+function initInputMask() {
+	if ($('.js-date-valid').length) {
+		$('.js-date-valid').inputmask("date",{
+			showMaskOnHover: false
+		}); 
+	}
+	
+}
+function initAccordion() {
+	$('.js-accordion-title').each(function () {
+		$(this).next().addClass('hidden')
+		$(this).on('click', function() {
+			$(this).find('.close').toggleClass('hidden');
+			$(this).next().slideToggle(300);
+			if ($(this).find('.down')) {
+				$(this).find('.down').toggleClass('up');
+			}
+
+		});
+	})
+	$('.js-reset-form').each(function () {
+		$(this).on('click', function() {
+			console.log($(this).closest('.js-accordion-content'));
+			$(this).closest('.js-accordion-content').trigger("reset");;
+		});
+	})
+}
+
  
 function initSetting() {
 	globalSetting.menuFirstOpen = false;
@@ -657,7 +737,6 @@ var globalSetting = [];
 initSetting();
 
 $( document ).ready(function() {
-
 	if ($('.js-scroll-content').length) {
 		shadowScroll('.js-scroll-container', '.js-scroll-content', '.js-scroll-opasity');
 		$('.js-scroll-container').on( 'scroll', function(){
@@ -691,7 +770,10 @@ $( document ).ready(function() {
 	initReview();
 	initTagResize();
 	initLike();
-	initFooterHover() 
+	initFooterHover();
+	initInputMask();
+	initAccordion();
+	
 	
 
 
