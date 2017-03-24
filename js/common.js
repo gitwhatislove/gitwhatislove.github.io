@@ -222,8 +222,8 @@ function initSliderCustom() {
 				$(openContent).fadeOut(500);
 				$('body').removeClass('overflow-hidden');
 				var activeSlide = 'video' + $(preview).find('.active').parent().data('gallery');
-				player = new YT.Player(activeSlide);
-				player.pauseVideo();
+				// player = new YT.Player(activeSlide);
+				// player.pauseVideo();
 			})
 			$(openContent).on('click', function(e) {
 				if (!$(e.target).closest('.gallery').length) {
@@ -722,12 +722,23 @@ function initAccordion() {
 	})
 	$('.js-reset-form').each(function () {
 		$(this).on('click', function() {
-			console.log($(this).closest('.js-accordion-content'));
 			$(this).closest('.js-accordion-content').trigger("reset");;
 		});
 	})
 }
 
+function initScrollTo() {
+	$('.js-scrollTo').each(function() {
+		$(this).on('click', function() {
+			var el = $(this).data('scroll');
+			var elC = $('.js-scrollTo-content').filter(function() {
+				return $(this).data('scroll') == el;
+			})
+			$(this).addClass('active').siblings().removeClass('active');
+			$(window).scrollTo(elC, 800);
+		})
+	})
+}
  
 function initSetting() {
 	globalSetting.menuFirstOpen = false;
@@ -773,9 +784,7 @@ $( document ).ready(function() {
 	initFooterHover();
 	initInputMask();
 	initAccordion();
-	
-	
-
+	initScrollTo();
 
 
 	// добавить стили классу
