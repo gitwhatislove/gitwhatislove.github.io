@@ -55,7 +55,6 @@ function initSliderMain() {
 		}
 		
 		if (($(self).width() > 700)&&(resize)) {
-			console.log('123', resize);
 			slickInit();
 			resize = false;
 		}
@@ -101,7 +100,6 @@ function initSliderVideo() {
 		}
 		
 		if (($(self).width() > 700)&&(resize)) {
-			console.log('123', resize);
 			slickInit();
 			resize = false;
 		}
@@ -295,7 +293,6 @@ function initForm() {
 		else $(this).removeClass('input-border-bottom-value');
 	})
 	$('.js-form .input-wrapp input').on( "focusout", function() {
-		console.log($(this));
 		if(this.value.length != 0) {
 			$(this).addClass('input-border-bottom-value');
 		}
@@ -409,7 +406,6 @@ function initFilters() {
 				var __clickSelf = $(this);
 				if (!$(this).prev().prop("checked")) {
 					textFilter.push($(this).text());
-					console.log(textFilter);
 				}
 				else {
 					textFilter = textFilter.filter(function(el) {
@@ -584,7 +580,6 @@ function initMenuOther() {
 			$('.js-menu-dropdown').find('.main_menu').children().last().fadeIn(0);
 
 			for(var i = 0; i < addEl.length-1; i ++) {
-				console.log(addEl[i]);
 				addEl[i].prependTo('.js-menu-dropdown-dop');
 			}
 			
@@ -739,6 +734,31 @@ function initScrollTo() {
 		})
 	})
 }
+
+function initValidForm(){
+	var form_valid = $(".js-form");
+	if (form_valid.length) {
+		form_valid.each(function() {
+			var form_this  = $(this);
+			$.validate({
+				form: form_this, 
+				borderColorOnError: true,
+				scrollToTopOnError: false, 
+				onSuccess: function($form) {
+					if (!$form.parent().parent().hasClass('js-popup-sing-in')) 
+						if ($form.hasClass('js-no-popup')) {
+							$($form).trigger("reset");
+						}
+						else {
+							$form.parent().parent().fadeOut().next().fadeIn();
+						}
+						
+					return false;
+				}
+			});
+		});
+	}
+}
  
 function initSetting() {
 	globalSetting.menuFirstOpen = false;
@@ -785,7 +805,7 @@ $( document ).ready(function() {
 	initInputMask();
 	initAccordion();
 	initScrollTo();
-
+	initValidForm();
 
 	// добавить стили классу
 	// console.log(document.styleSheets[0].rules[260]);

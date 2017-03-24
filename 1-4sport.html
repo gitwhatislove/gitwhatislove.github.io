@@ -58,13 +58,13 @@
               <h3>Создать аккаунт</h3>
               <p class="text-note">Есть личный кабинет? <span class="js-popup-open" data-open-popup = "popup-sing-in">Войдите</span> в свой аккаунт для просмотра профильной информации.</p>
               <form class="js-form">
-                <input class="input-border-bottom">
+                <input class="input-border-bottom" data-validation="required" type="text">
                 <label>Имя и фамилия <span>*</span></label>
-                <input class="input-border-bottom">
+                <input class="input-border-bottom" data-validation="email required" type="text">
                 <label>E-mail<span>*</span></label>
-                <input class="input-border-bottom" type="password">
+                <input class="input-border-bottom" data-validation="required" data-validation-strength="5" type="password">
                 <label>Пароль<span>*</span></label>
-                <input class="input-border-bottom">
+                <input class="input-border-bottom" data-validation="required" data-validation-strength="5" type="password">
                 <label>Повторите пароль<span>*</span></label>
                 <button class="btn btn-size-225 btn-black">Создать</button>
               </form>
@@ -76,6 +76,13 @@
               </ul>
               <p class="link js-popup-open" data-open-popup="popup-create-account-success">Успешное востановление</p>
               <p class="link js-popup-open" data-open-popup="popup-sub">Подписка</p>
+            </div>
+          </div>
+          <div class="wrapp_popup-contener js-popup-create-account-success">
+            <div class="wrapp_popup_window hidden">
+              <div class="wrapp_close js-popup-close" data-close-popup="popup-create-account-success"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></div>
+              <h3>Спасибо</h3>
+              <p class="text-note success">Вы успешно прошли регистрацию. Добро пожаловать в мир Fashionbank.</p>
             </div>
           </div>
           <div class="wrapp_popup-contener js-popup-sing-in">
@@ -118,13 +125,6 @@
               <p class="text-note success">На указанный вами E-mail выслано письмо с вашими регистрационными данными, пожалуйста проверьте вашу почту.</p>
             </div>
           </div>
-          <div class="wrapp_popup-contener js-popup-create-account-success">
-            <div class="wrapp_popup_window hidden">
-              <div class="wrapp_close js-popup-close" data-close-popup="popup-create-account-success"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></div>
-              <h3>Спасибо</h3>
-              <p class="text-note success">Вы успешно прошли регистрацию. Добро пожаловать в мир Fashionbank.</p>
-            </div>
-          </div>
           <div class="wrapp_popup-contener js-popup-sub">
             <div class="wrapp_popup_window hidden">
               <div class="wrapp_close js-popup-close" data-close-popup="popup-sub"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></div>
@@ -149,16 +149,15 @@
               <div class="wrapp_close js-popup-close" data-close-popup="popup-backcall"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></div>
               <h3>Обратный звонок</h3>
               <form class="js-form">
-                <input class="input-border-bottom">
+                <input class="input-border-bottom" data-validation="required" type="text">
                 <label>Имя<span>*</span></label>
                 <input class="input-border-bottom">
                 <label>E-mail</label>
-                <input class="input-border-bottom">
+                <input class="input-border-bottom" data-validation="number" type="text" data-validation-length="min10">
                 <label>Телефон<span>*</span></label>
-                <input class="input-border-bottom">
+                <input class="input-border-bottom" data-validation="required" type="text">
                 <label>Сообщение<span>*</span></label>
                 <button class="btn btn-size-225 btn-black">Заказать</button>
-                <p class="link js-popup-open" data-open-popup="popup-backcall-success">Успешная заказ</p>
               </form>
             </div>
           </div>
